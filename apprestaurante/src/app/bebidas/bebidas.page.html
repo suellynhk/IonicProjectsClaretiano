@@ -1,0 +1,155 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Bebidas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>  
+  <ion-list>
+    <ion-item id="trigger-modalRefri" button="true">
+      <ion-thumbnail slot="start">
+        <img src="https://pt.gravatar.com/userimage/219942815/576acd29ab507edfc73dcef29cef138d.png">
+      </ion-thumbnail>
+      <ion-label>Refrigerante- 5,00</ion-label>
+    </ion-item>
+
+    <ion-item id="trigger-modalAgua" button="true">
+      <ion-thumbnail slot="start">
+        <img src="https://en.gravatar.com/userimage/219942815/aad76e37d2307f6dcd1ae4e80d5fdbe1.png">
+      </ion-thumbnail>
+      <ion-label>Água mineral- 3,00</ion-label>
+    </ion-item>
+
+    <ion-item id="trigger-modalAguaTonica" button="true">
+      <ion-thumbnail slot="start">
+        <img src="https://en.gravatar.com/userimage/219942815/d7bfca8f8f286c30f277b4804f28ee3a.png">
+      </ion-thumbnail>
+      <ion-label>Água tônica- 5,00</ion-label>
+    </ion-item>
+
+    <ion-item id="trigger-modalSuco" button="true">
+      <ion-thumbnail slot="start">
+        <img src="https://en.gravatar.com/userimage/219942815/2505512ac543725608bdfa54ad688659.png">
+      </ion-thumbnail>
+      <ion-label>Suco de laranja- 4,00</ion-label>
+    </ion-item>
+
+    <ion-item id="trigger-modalChopp" button="true">
+      <ion-thumbnail slot="start">
+        <img src="https://pt.gravatar.com/userimage/219942815/170c71dae786682588ead61bddd5cba3.png">
+      </ion-thumbnail>
+      <ion-label>Chopp- 8,00</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<!-- Modais -->
+<ion-modal trigger="trigger-modalRefri">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar color="tertiary">
+        <ion-icon class="icon-close" (click)="dismissModal()" slot="end" name="close-outline"></ion-icon>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-card>
+        <ion-card-header>
+          <img class="img-modal" src="https://i.imgur.com/sSV3nQO.png">
+          <ion-card-title> Refrigerante </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Coca-cola, Sprite, Fanta laranja- lata 350ml.
+        </ion-card-content>
+      </ion-card>
+    </ion-content>
+  </ng-template>
+</ion-modal>
+
+<ion-modal trigger="trigger-modalAgua">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar color="tertiary">
+        <ion-icon class="icon-close" (click)="dismissModal()" slot="end" name="close-outline"></ion-icon>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-card>
+        <ion-card-header>
+          <img class="img-modal" src="https://i.imgur.com/UGr96cO.png">
+          <ion-card-title> Água mineral </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Água mineral- garrafa 500ml.
+        </ion-card-content>
+      </ion-card>
+    </ion-content>
+  </ng-template>
+</ion-modal>
+
+<ion-modal trigger="trigger-modalAguaTonica">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar color="tertiary">
+        <ion-icon class="icon-close" (click)="dismissModal()" slot="end" name="close-outline"></ion-icon>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-card>
+        <ion-card-header>
+          <img class="img-modal" src="https://i.imgur.com/NxRxBGz.png">
+          <ion-card-title> Água tônica </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Água tônica Schweppes- lata 355ml.
+        </ion-card-content>
+      </ion-card>
+    </ion-content>
+  </ng-template>
+</ion-modal>
+
+<ion-modal trigger="trigger-modalSuco">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar color="tertiary">
+        <ion-icon class="icon-close" (click)="dismissModal()" slot="end" name="close-outline"></ion-icon>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-card>
+        <ion-card-header>
+          <img class="img-modal" src="https://i.imgur.com/z6HKPWC.png">
+          <ion-card-title> Suco de laranja </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Suco natural de laranja- copo 400ml.
+        </ion-card-content>
+      </ion-card>
+    </ion-content>
+  </ng-template>
+</ion-modal>
+
+<ion-modal trigger="trigger-modalChopp">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar color="tertiary">
+        <ion-icon class="icon-close" (click)="dismissModal()" slot="end" name="close-outline"></ion-icon>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-card>
+        <ion-card-header>
+          <img class="img-modal" src="https://i.imgur.com/x7JoGS3.png">
+          <ion-card-title> Chopp Pilsen ou Puro Malte </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Chopp pilsen ou puro malte- copo 500ml.
+        </ion-card-content>
+      </ion-card>
+    </ion-content>
+  </ng-template>
+</ion-modal>
+
+

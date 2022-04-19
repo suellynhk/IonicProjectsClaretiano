@@ -1,0 +1,306 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Entradas e Pratos principais</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>  
+  <ion-list>
+    <ion-item>
+      <ion-label><b>Entradas: </b></ion-label>
+    </ion-item>
+    <ion-item  id="trigger-modalTilapia" button="true">
+      <ion-thumbnail slot="start">
+        <img src="https://pt.gravatar.com/userimage/219942815/71b0425d9cf8c5eff76d329ec85a4670.png">
+      </ion-thumbnail>
+      <ion-label> Porção de tilápia- 20,00 </ion-label>
+    </ion-item>
+
+    <ion-item  id="trigger-modalPaoAlho" button="true">
+      <ion-thumbnail slot="start">
+        <img src="https://pt.gravatar.com/userimage/219942815/3a44f419d7d87c3cf61c1e46cf7e1a90.png">
+      </ion-thumbnail>
+      <ion-label> Pães de alho- 12,00</ion-label>
+    </ion-item>
+
+    <ion-item  id="trigger-modalBerinjela" button="true">
+      <ion-thumbnail slot="start">
+        <img src="https://pt.gravatar.com/userimage/219942815/6e07c7242e3def9598c6bd5974dffe64.png">
+      </ion-thumbnail>
+      <ion-label> Berinjelas empanadas- 10,00</ion-label>
+    </ion-item>
+
+    <ion-item  id="trigger-modalBruschetta" button="true">
+      <ion-thumbnail slot="start">
+        <img src="https://pt.gravatar.com/userimage/219942815/3ddbf14c2045f0459a802cd08a36dc06.png">
+      </ion-thumbnail>
+      <ion-label> Bruschettas- 15,00 </ion-label>
+    </ion-item>
+
+    <ion-item  id="trigger-modalBatata" button="true">
+      <ion-thumbnail slot="start">
+        <img src="https://pt.gravatar.com/userimage/219942815/774aae308763a97dd022d6a153a60e8a.png">
+      </ion-thumbnail>
+      <ion-label> Porção de batata com bacon- 9,00</ion-label>
+    </ion-item>
+  
+    <br>
+    <ion-item>
+      <ion-label><b>Pratos Principais: </b></ion-label>
+    </ion-item>
+    <ion-item id="trigger-modalLasanha" button="true">
+      <ion-thumbnail slot="start">
+        <img src="https://pt.gravatar.com/userimage/219942815/0b5d3e24e3df3f0ac92c5e397c43b402.png">
+      </ion-thumbnail>
+      <ion-label> Lasanha à bolonhesa- 25,00</ion-label>
+    </ion-item>
+
+    <ion-item id="trigger-modalNhoque" button="true">
+      <ion-thumbnail slot="start">
+        <img src="https://pt.gravatar.com/userimage/219942815/6eb8da1462ee3ddb43733d65bea8d117.png">
+      </ion-thumbnail>
+      <ion-label>Nhoque ao sugo- 23,00 </ion-label>
+    </ion-item>
+
+    <ion-item id="trigger-modalRisoto" button="true">
+      <ion-thumbnail slot="start">
+        <img src="https://pt.gravatar.com/userimage/219942815/e793155241de7f356adb89156e2d6d22.png">
+      </ion-thumbnail>
+      <ion-label>Risoto de alho poró e bacon- 21,00 </ion-label>
+    </ion-item>
+
+    <ion-item id="trigger-modalParmegiana" button="true">
+      <ion-thumbnail slot="start">
+        <img src="https://pt.gravatar.com/userimage/219942815/9f54d50441aed4972feef1012dd0cd7c.png">
+      </ion-thumbnail>
+      <ion-label>Filé à parmegiana- 29,00</ion-label>
+    </ion-item>
+
+    <ion-item id="trigger-modalCarbonara" button="true">
+      <ion-thumbnail slot="start">
+        <img src="https://pt.gravatar.com/userimage/219942815/be84ae824ccf93fea61e1ec1e7343d57.png">
+      </ion-thumbnail>
+      <ion-label>Penne à carbonara- 23,00</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<!-- Modais -->
+<ion-modal trigger="trigger-modalTilapia">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar color="tertiary">
+        <ion-icon class="icon-close" (click)="dismissModal()" slot="end" name="close-outline"></ion-icon>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-card>
+        <ion-card-header>
+          <img class="img-modal" src="https://i.imgur.com/Mnxnlw1.png">
+          <ion-card-title> Porção de tilápia </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Filé de tilápia empanado (300 gr), acompanha molho tártaro.
+        </ion-card-content>
+      </ion-card>
+    </ion-content>
+  </ng-template>
+</ion-modal>
+
+<ion-modal trigger="trigger-modalPaoAlho">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar color="tertiary">
+        <ion-icon class="icon-close" (click)="dismissModal()" slot="end" name="close-outline"></ion-icon>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-card>
+        <ion-card-header>
+          <img class="img-modal" src="https://i.imgur.com/B6kxtex.png">
+          <ion-card-title> Pães de alho com emmental </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Fatias de pão tostadas com alho, queijo emmental gratinado e ervas de provença. (6 unidades)
+        </ion-card-content>
+      </ion-card>
+    </ion-content>
+  </ng-template>
+</ion-modal>
+
+<ion-modal trigger="trigger-modalBerinjela">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar color="tertiary">
+        <ion-icon class="icon-close" (click)="dismissModal()" slot="end" name="close-outline"></ion-icon>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-card>
+        <ion-card-header>
+          <img class="img-modal" src="https://i.imgur.com/LDz9sh3.png?1">
+          <ion-card-title> Berinjelas empanadas </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Fatias de berinjelas empanadas, acompanha melaço de cana. (8 unidades)
+        </ion-card-content>
+      </ion-card>
+    </ion-content>
+  </ng-template>
+</ion-modal>
+
+<ion-modal trigger="trigger-modalBruschetta">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar color="tertiary">
+        <ion-icon class="icon-close" (click)="dismissModal()" slot="end" name="close-outline"></ion-icon>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-card>
+        <ion-card-header>
+          <img class="img-modal" src="https://i.imgur.com/GKVvaRy.png">
+          <ion-card-title> Bruschettas </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Fatias de pão tostadas, molho de tomate, tomate, queijo parmesão e orégano. (6 unidades)
+        </ion-card-content>
+      </ion-card>
+    </ion-content>
+  </ng-template>
+</ion-modal>
+
+<ion-modal trigger="trigger-modalBatata">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar color="tertiary">
+        <ion-icon class="icon-close" (click)="dismissModal()" slot="end" name="close-outline"></ion-icon>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-card>
+        <ion-card-header>
+          <img class="img-modal" src="https://i.imgur.com/6ZZTAHi.png?1">
+          <ion-card-title> Porção de batata frita com bacon e queijo </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Batatas fritas (200 gr), queijo muçarela, queijo cheddar e bacon.
+        </ion-card-content>
+      </ion-card>
+    </ion-content>
+  </ng-template>
+</ion-modal>
+
+<ion-modal trigger="trigger-modalLasanha">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar color="tertiary">
+        <ion-icon class="icon-close" (click)="dismissModal()" slot="end" name="close-outline"></ion-icon>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-card>
+        <ion-card-header>
+          <img class="img-modal" src="https://i.imgur.com/fIAWmsD.png?1g">
+          <ion-card-title> Lasanha à bolonhesa </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Lasanha com molho bolonhesa, molho branco e queijo (300gr)
+        </ion-card-content>
+      </ion-card>
+    </ion-content>
+  </ng-template>
+</ion-modal>
+
+<ion-modal trigger="trigger-modalNhoque">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar color="tertiary">
+        <ion-icon class="icon-close" (click)="dismissModal()" slot="end" name="close-outline"></ion-icon>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-card>
+        <ion-card-header>
+          <img class="img-modal" src="https://i.imgur.com/zILExLN.png">
+          <ion-card-title> Nhoque ao sugo </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Nhoque de batata ao molho sugo e queijo parmesão. (260 gr)
+        </ion-card-content>
+      </ion-card>
+    </ion-content>
+  </ng-template>
+</ion-modal>
+
+<ion-modal trigger="trigger-modalRisoto">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar color="tertiary">
+        <ion-icon class="icon-close" (click)="dismissModal()" slot="end" name="close-outline"></ion-icon>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-card>
+        <ion-card-header>
+          <img class="img-modal" src="https://i.imgur.com/ciSFf4p.png">
+          <ion-card-title>  Risoto de alho poró e bacon </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Risoto de alho poró, bacon e limão siciliano. (190 gr)
+        </ion-card-content>
+      </ion-card>
+    </ion-content>
+  </ng-template>
+</ion-modal>
+
+<ion-modal trigger="trigger-modalParmegiana">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar color="tertiary">
+        <ion-icon class="icon-close" (click)="dismissModal()" slot="end" name="close-outline"></ion-icon>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-card>
+        <ion-card-header>
+          <img class="img-modal" src="https://i.imgur.com/ogteXnx.png">
+          <ion-card-title> Filé à parmegiana </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Filé mignon empanado com molho de tomate e queijo gratinado. (150 gr)
+        </ion-card-content>
+      </ion-card>
+    </ion-content>
+  </ng-template>
+</ion-modal>
+
+<ion-modal trigger="trigger-modalCarbonara">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar color="tertiary">
+        <ion-icon class="icon-close" (click)="dismissModal()" slot="end" name="close-outline"></ion-icon>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-card>
+        <ion-card-header>
+          <img class="img-modal" src="https://i.imgur.com/uZdQVna.png">
+          <ion-card-title> Penne à carbonara </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Penne com molho a base de creme de leite, gemas, queijo parmesão e pimenta preta; com pedaços de bacon. (200gr)
+        </ion-card-content>
+      </ion-card>
+    </ion-content>
+  </ng-template>
+</ion-modal>
+
+
+
+
+
+

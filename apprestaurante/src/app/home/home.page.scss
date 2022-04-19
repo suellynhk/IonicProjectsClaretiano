@@ -1,0 +1,115 @@
+#container {
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+  color: #8c8c8c;
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+ion-toolbar{
+  display: flex;
+  flex-direction: row;
+}
+
+.icon-header {
+  font-size: 70px;
+  margin-left: 10px; 
+}
+
+.title {
+  position: fixed;
+  font-size: 18px;
+  margin-left: 5px;
+  margin-top: 35px;
+}
+
+.bg-lanches {
+  background-image: url('../../assets/images/lanches.png');
+  width: auto;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: 15px 10px;
+}
+
+.bg-entradasprincipais {
+  background-image: url('../../assets/images/entradas-principais.png');
+  width: auto;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: 15px 10px;
+}
+
+.bg-sobremesas {
+  background-image: url('../../assets/images/sobremesas.png');
+  width: auto;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: 15px 10px;
+}
+
+.bg-bebidas {
+  background-image: url('../../assets/images/bebidas.png');
+  width: auto;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.box {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+ -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(10px);
+  max-width: 70%;
+  max-height: auto;
+  padding: 15px 15px;
+  margin: auto;
+}
+
+.prato-dia{
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(212, 42, 42);
+}
+
+.set-prato-dia{
+  background-color: #eedfce;
+  margin-top: 65px;
+}
+
+ion-card-content{
+  padding: 0 5px;
+}
+
+ion-card-subtitle{
+  font-size: 12px;
+}
+
+.icon-close {
+  font-size: 32px;
+  margin-right: 10px; 
+}
+

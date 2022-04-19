@@ -1,0 +1,158 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Lanches</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item id="trigger-modalPulledPork" button="true">
+      <ion-thumbnail slot="start">
+        <img src="https://pt.gravatar.com/userimage/219942815/fc7324fd224854066f9dcad028236ac0.png">
+      </ion-thumbnail>
+      <ion-label>Pulled Pork- 22,00 </ion-label>
+    </ion-item>
+
+    <ion-item id="trigger-modalOriginal" button="true">
+      <ion-thumbnail slot="start">
+        <img src="https://pt.gravatar.com/userimage/219942815/87868b587e519291881790b213513743.png">
+      </ion-thumbnail>
+      <ion-label>Original- 23,00 </ion-label>
+    </ion-item>
+
+    <ion-item id="trigger-modalChicken" button="true">
+      <ion-thumbnail slot="start">
+        <img src="https://pt.gravatar.com/userimage/219942815/a6758bcf97964959b7d08bf74e293e5a.png">
+      </ion-thumbnail>
+      <ion-label>Chicken- 21,00 </ion-label>
+    </ion-item>
+
+    <ion-item id="trigger-modalAngus" button="true">
+      <ion-thumbnail slot="start">
+        <img src="https://pt.gravatar.com/userimage/219942815/e21270f139eeaa4add5bd754e5a0c699.png">
+      </ion-thumbnail>
+      <ion-label>Angus- 24,00 </ion-label>
+    </ion-item>
+
+    <ion-item id="trigger-modalVegan" button="true">
+      <ion-thumbnail slot="start">
+        <img src="https://pt.gravatar.com/userimage/219942815/11752a9519365256265f4a9a463962d5.png">
+      </ion-thumbnail>
+      <ion-label>Vegan- 20,00 </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <p id="obs">*Cada lanche acompanha uma porção pequena de batata frita.</p>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<!-- Modais -->
+<ion-modal trigger="trigger-modalPulledPork">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar color="tertiary">
+        <ion-icon class="icon-close" (click)="dismissModal()" slot="end" name="close-outline"></ion-icon>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-card>
+        <ion-card-header>
+          <img class="img-modal" src="https://i.imgur.com/1UcbxDx.png">
+          <ion-card-title> Pulled Pork </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Carne de porco desfiada, molho de queijo cheddar, alface, cebola e sour cream.
+        </ion-card-content>
+      </ion-card>
+    </ion-content>
+  </ng-template>
+</ion-modal>
+
+<ion-modal trigger="trigger-modalOriginal">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar color="tertiary">
+        <ion-icon class="icon-close" (click)="dismissModal()" slot="end" name="close-outline"></ion-icon>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-card>
+        <ion-card-header>
+          <img class="img-modal" src="https://i.imgur.com/vYGwbS3.png">
+          <ion-card-title> Original </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Hamburguer de Fraldinha, queijo curado, rúcula, cebola ao vinho e maionese de chimichurri.
+        </ion-card-content>
+      </ion-card>
+    </ion-content>
+  </ng-template>
+</ion-modal>
+
+<ion-modal trigger="trigger-modalChicken">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar color="tertiary">
+        <ion-icon class="icon-close" (click)="dismissModal()" slot="end" name="close-outline"></ion-icon>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-card>
+        <ion-card-header>
+          <img class="img-modal" src="https://i.imgur.com/V0EVLLG.png">
+          <ion-card-title> Crispy Chicken </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Peito de frango empanado, queijo cheddar, alface e maionese.
+        </ion-card-content>
+      </ion-card>
+    </ion-content>
+  </ng-template>
+</ion-modal>
+
+<ion-modal trigger="trigger-modalAngus">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar color="tertiary">
+        <ion-icon class="icon-close" (click)="dismissModal()" slot="end" name="close-outline"></ion-icon>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-card>
+        <ion-card-header>
+          <img class="img-modal" src="https://i.imgur.com/O74zbUw.png">
+          <ion-card-title> Angus </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Hamburguer angus, queijo cheddar, alface, cebola roxa e molho ranch.
+        </ion-card-content>
+      </ion-card>
+    </ion-content>
+  </ng-template>
+</ion-modal>
+
+<ion-modal trigger="trigger-modalVegan">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar color="tertiary">
+        <ion-icon class="icon-close" (click)="dismissModal()" slot="end" name="close-outline"></ion-icon>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-card>
+        <ion-card-header>
+          <img class="img-modal" src="https://i.imgur.com/ETxUy3Z.png">
+          <ion-card-title> Vegan </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Hamburguer vegetal (grão de bico, espinafre e pimentão) empanado, queijo vegano, alface, tomate,
+          cebola caramelizada, e maionese vegana.
+        </ion-card-content>
+      </ion-card>
+    </ion-content>
+  </ng-template>
+</ion-modal>

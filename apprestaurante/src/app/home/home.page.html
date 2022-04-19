@@ -1,0 +1,87 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="tertiary">
+    <ion-icon src="\assets\icon\gastronauta2.svg" class="icon-header"></ion-icon>
+    <ion-text class="title">Gastronauta</ion-text>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <ion-card button="true" id="trigger-button" class="set-prato-dia">
+      <ion-card-header>
+        <ion-card-title class="prato-dia">Prato do dia</ion-card-title>
+        <ion-card-subtitle> Entrada + Prato Principal + Sobremesa por 24,90 </ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <img src="../../assets/images/prato-dia.png">
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card button="true" class="bg-lanches" routerLink="/lanches">
+      <ion-card-header>
+        <ion-card-title class="box">Lanches</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card button="true" class="bg-entradasprincipais" routerLink="/entrada-refeicao">
+      <ion-card-header>
+        <ion-card-title class="box">Entradas e Pratos Principais</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card button="true" class="bg-sobremesas" routerLink="/sobremesas">
+      <ion-card-header>
+        <ion-card-title class="box">Sobremesas</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card button="true" class="bg-bebidas" routerLink="/bebidas">
+      <ion-card-header>
+        <ion-card-title class="box">Bebidas</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+  </div>
+</ion-content>
+
+<!-- Modal do Prato do dia -->
+<ion-modal trigger="trigger-button">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar color="tertiary">
+        <ion-title>Prato do dia</ion-title>
+        <ion-icon class="icon-close" (click)="dismissModal()" slot="end" name="close-outline"></ion-icon>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+      <ion-list>
+        <ion-item>
+          <ion-label>
+            <b>Promoção: </b>
+            <p>Entrada + Prato principal + Sobremesa = 24,90 </p>
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img src="https://pt.gravatar.com/userimage/219942815/3ddbf14c2045f0459a802cd08a36dc06.png">
+          </ion-thumbnail>
+          <ion-label>Bruschetta (2 unidades)</ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img src="https://pt.gravatar.com/userimage/219942815/e793155241de7f356adb89156e2d6d22.png">
+          </ion-thumbnail>
+          <ion-label>Risoto de alho poró com bacon</ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img src="https://pt.gravatar.com/userimage/219942815/70e5e495d9ef01c1bd39c8766be9e2e5.png">
+          </ion-thumbnail>
+          <ion-label>Tortinha de maçã</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ng-template>
+</ion-modal>
