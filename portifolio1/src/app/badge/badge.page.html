@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar color="favorite">
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title> Patitas </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" >
+  <ion-text color="dark">
+    <h2> Pet do dia:</h2> 
+    <p>Esse é o Costelinha, um simpático dog caramelo!</p>
+  </ion-text>
+  <br>
+  <ion-item>
+    <ion-img src="https://bit.ly/3uiIkDU"></ion-img>
+  </ion-item>
+
+  <ion-item>
+    <ion-button (click)="handleLike()" color="orange">
+      <ion-icon name="heart-outline"></ion-icon> 
+    </ion-button>
+    <ion-button (click)="coment()" color="orange">
+      <ion-icon name="chatbox-ellipses-outline"></ion-icon> 
+    </ion-button>
+  </ion-item>
+
+  <ion-item>
+    <ion-icon name="heart" item-start color="danger"></ion-icon>
+     <p class="p-badge"> Likes </p>
+    <ion-badge item-end color="orange">{{likeValue}}</ion-badge>
+  </ion-item>
+
+  <ion-item>
+    <ion-icon name="chatbox-ellipses" item-start color="primary"></ion-icon>
+      <p class="p-badge"> Comentários </p>
+    <ion-badge item-end color="orange">{{comentValue}}</ion-badge>
+  </ion-item>
+  <br>
+  
+  <div *ngIf="comentario !== undefined">
+    <p>Seu comentário: </p>
+    <p>{{comentario}}</p>
+  </div>
+</ion-content>

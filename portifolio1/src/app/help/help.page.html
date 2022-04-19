@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar color="favorite">
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title> Patitas </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-text color="dark">
+    <h2> Além de adotar, você também pode ajudar de outras maneiras:</h2> 
+  </ion-text>
+
+  <ion-list>
+    <ion-item>
+      <ion-icon name="paw-outline" size="small" color="orange" ></ion-icon>
+      <p class="p-list">Doar itens (ex: alimentos e acessórios).</p>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="paw-outline"  size="small" color="orange" > </ion-icon>
+      <p class="p-list">Apadrinhar um ou mais pets.</p>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="paw-outline"  size="small" color="orange" ></ion-icon>
+      <p class="p-list">Ser voluntário em eventos ou abrigos.</p>
+    </ion-item>
+  </ion-list>
+
+  <br>
+  <p>Clique no botão abaixo e infome seus dados para entrarmos em contato!</p>
+  <ion-button (click)="presentAlert()" color="orange"> 
+    <p>Informe seus dados!</p>  
+  </ion-button>
+
+  <div *ngIf="email !== undefined">
+    <p>Dados enviados: </p>
+    <p>email: {{email}}</p>
+    <p>telefone: {{telefone}}</p>
+  </div>
+</ion-content>

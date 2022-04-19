@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color="favorite">
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title> Patitas </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-text> 
+   <h2>Faça seu login: </h2>
+  </ion-text>
+  <ion-item>
+    <ion-label>Usuário: </ion-label>
+    <ion-input type="text" [(ngModel)]="user" placeholder="digite seu nome de usuário" required></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Senha: </ion-label>
+    <ion-input type="password" [(ngModel)]="senha" placeholder="digite sua senha" maxlength="8" required></ion-input>
+  </ion-item>
+  <br>
+  <a id="cadastro" routerLink="['/cadastro']">Ainda não possui cadastro? Cadastre-se.</a>
+  <br>
+  <br>
+  <br>
+  <ion-button (click)="validarLogin()" color="orange"> 
+   Acessar
+  </ion-button>
+
+</ion-content>

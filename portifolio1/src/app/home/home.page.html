@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar color="favorite">
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-title> Portifólio 1 </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-text color="dark">
+    <h2>Patitas <ion-icon name="paw-outline" size="medium" ></ion-icon></h2>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;Somos uma comunidade e um ponto de conexão entre quem 
+    deseja adotar um pet e uma rede formada por ONGs e lares de resgate de animais.</p>
+  </ion-text>
+  <br>
+  <ion-text>
+    <h3>Como está se sentindo hoje? </h3>
+  </ion-text>
+  
+  <ion-list>
+    <ion-item lines="full" button (click)="toastFeliz()">
+      <ion-label>Feliz</ion-label>
+    </ion-item>
+
+    <ion-item lines="full" button (click)="toastTriste()">
+      <ion-label>Triste</ion-label>
+    </ion-item>
+
+    <ion-item lines="full" button (click)="toastBrava()">
+      <ion-label>Brava(o)</ion-label>
+    </ion-item>
+
+    <ion-item lines="full" button (click)="toastAnsiosa()">
+      <ion-label>Ansiosa(o)</ion-label>
+    </ion-item>
+
+    <ion-item lines="full" button (click)="toastIncrivel()">
+      <ion-label>Incrível</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+
+
